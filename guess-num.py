@@ -5,13 +5,17 @@
 
 import random
 ans = random.randint(1, 100)
+count = 0
 while True:
 	guess = input('請猜一個數字： ')
 	guess = int(guess)
+	count += 1 # count = count + 1
 	if ans == guess:
 		print('你猜中了')
+		print('這是你猜的第', count, '次')
 		break
 	elif ans > guess:
 		print('比答案小')
 	else:
 		print('比答案大')
+	print('這是你猜的第', count, '次')	
